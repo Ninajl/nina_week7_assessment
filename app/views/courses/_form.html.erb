@@ -1,0 +1,21 @@
+<%= form_for @course do |f| %>
+
+<div>
+<%= f.label :title %>
+<%= f.text_field :title %>
+</div>
+<br>
+<div>
+  <%= f.label :day %>
+  <%= f.password_field :day %>
+</div>
+<br>
+<div>
+  <%= f.label :night %>
+  <%= f.text_field :night %>
+</div>
+
+<div>
+  <%= f.submit %>
+</div>
+<% end %>

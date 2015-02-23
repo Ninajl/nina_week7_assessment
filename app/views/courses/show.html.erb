@@ -1,0 +1,8 @@
+<h1> <%= @course.title %></h1>
+
+<% if @course.day %>
+<li><%= @course.day %></li>
+<% else %>
+<li><%= @course.night %></li>
+<% end %>
+</ul>

@@ -1,0 +1,22 @@
+<h1>Courses Index Page</h1>
+<%= link_to "Create Course", new_course_path %>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Day or Night</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @courses.each do |course| %>
+    <tr>
+      <td><%= link_to course.title, course_path(course) %></td>
+      <% if course.day == true %>
+      <td> Day</td>
+      <% else %>
+      <td><%= course.night %></td>
+      <% end %>
+    </tr>
+  </tbody>
+  <% end %>
+</table>
