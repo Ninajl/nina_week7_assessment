@@ -1,0 +1,19 @@
+<h1>All Users</h1>
+
+<%= link_to "Create User", new_user_path %>
+<table>
+  <thead>
+    <tr>
+      <th>User Name</th>
+      <th>About</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= @users.each do |user| %>
+    <tr>
+      <td><%= user.user_name %></td>
+      <td><%= user.about %></td>
+    </tr>
+  </tbody>
+  <% end %>
+</table>
