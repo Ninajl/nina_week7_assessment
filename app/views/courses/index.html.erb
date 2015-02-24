@@ -11,6 +11,8 @@
     <% @courses.each do |course| %>
     <tr>
       <td><%= link_to course.title, course_path(course) %></td>
+      <td> <%= course.day ? "Day"  : "Night" %></td>
+      <td> <%= link_to 'Delete Course', course, method: :delete, data: {confirm: 'Are you sure?'} %>
     </tr>
   </tbody>
   <% end %>
