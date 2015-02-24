@@ -11,11 +11,6 @@
     <% @courses.each do |course| %>
     <tr>
       <td><%= link_to course.title, course_path(course) %></td>
-      <% if course.day == true %>
-      <td> Day</td>
-      <% else %>
-      <td><%= course.night %></td>
-      <% end %>
     </tr>
   </tbody>
   <% end %>

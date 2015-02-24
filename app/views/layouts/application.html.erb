@@ -7,9 +7,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <a class="navbar-brand" href="/">Users Homepage</a>
+  <%= link_to "Home", root_path %>
   <%= link_to "Course Index Page", courses_path %>
-<%= yield %>
+
+  <% if current_user %>
+  <% current_user.user_name %>
+  <%= link_to "Sign Out", signout_path %>
+  <% else %>
+  <%= link_to "Log In", signin_path %>
+  <% end %>
+
+  <%= yield %>
 
 </body>
 </html>

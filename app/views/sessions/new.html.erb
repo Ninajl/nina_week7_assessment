@@ -1,0 +1,27 @@
+
+<%= form_tag signin_path do %>
+
+<h1>Log In</h1>
+
+<br>
+
+<% if @sign_in_error %>
+<div class="alert alert-danger"><%= @sign_in_error %></div>
+<% end %>
+
+<div>
+<%= label_tag :user_name, nil %>
+<br>
+<%= text_field_tag :user_name, nil %>
+</div>
+
+<div>
+<%= label_tag :password, nil %>
+<br>
+<%= password_field_tag :password, nil%>
+</div>
+
+<div>
+  <%= submit_tag 'Sign In'%>
+  <% end %>
+</div>

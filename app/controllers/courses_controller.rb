@@ -1,4 +1,5 @@
 class CoursesController <ApplicationController
+  before_action :user_logged_in!
 
   def index
     @courses = Course.all
