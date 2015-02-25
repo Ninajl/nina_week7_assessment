@@ -1,5 +1,5 @@
 class CoursesController <ApplicationController
-  before_action :authenticate
+  #before_action :authenticate
 
   def index
     @courses = Course.all
@@ -14,7 +14,7 @@ class CoursesController <ApplicationController
     if @course.save
       redirect_to courses_path
     else
-      rendor :new
+      render :new
     end
   end
 
@@ -27,6 +27,12 @@ class CoursesController <ApplicationController
   end
 
   def update
+    @course = Course.find(params[:id])
+    if @course.save(course_params)
+      redirect_to courses_path
+    else
+      render :edit
+    end
   end
 
   def destroy
