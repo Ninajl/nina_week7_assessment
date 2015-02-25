@@ -1,0 +1,16 @@
+<%= form_for @user, url: signup_path do |f| %>
+
+<div>
+<%= f.label :user_name %>
+<%= f.text_field :user_name %>
+</div>
+<br>
+<div>
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+</div>
+
+<div>
+  <%= f.submit%>
+</div>
+<% end %>

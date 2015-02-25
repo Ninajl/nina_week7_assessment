@@ -1,5 +1,5 @@
 class CoursesController <ApplicationController
-  before_action :user_logged_in!
+  before_action :authenticate
 
   def index
     @courses = Course.all

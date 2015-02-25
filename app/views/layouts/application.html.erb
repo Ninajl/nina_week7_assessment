@@ -18,6 +18,7 @@
   <% current_user.user_name %>
   <%= link_to "Sign Out", signout_path %>
   <% else %>
+  <%= link_to "Sign Up", signup_path %>
   <%= link_to "Log In", signin_path %>
   <% end %>
 </div>

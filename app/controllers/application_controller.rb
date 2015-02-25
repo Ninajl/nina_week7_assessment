@@ -7,17 +7,13 @@ class ApplicationController < ActionController::Base
     @current_user ||= User.find_by(id:session[:user_id])
   end
 
-  helper_method :current_user
 
-
-  def user_logged_in!
+  def authenticate
     if not current_user
       redirect_to signin_path, notice: "Not signed in!"
     end
   end
 
-  def current_user?
-    current_user.present
-  end
-
+  helper_method :current_user
+  
 end
